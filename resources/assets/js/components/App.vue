@@ -12,7 +12,8 @@
 	import TopMenu from './shared/TopMenu.vue';
 	import AppFooter from './shared/AppFooter.vue';
 
-	export default {
+	export default { created() {  console.log('/js/components/shared/App.vue-- created');  },
+	
 		components: {
 			'top-menu': TopMenu,
 			'app-footer': AppFooter

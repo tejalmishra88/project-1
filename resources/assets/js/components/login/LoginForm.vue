@@ -2,7 +2,7 @@
 	<div>
 		<form @submit.prevent="login">
 			<div class="form-group">
-				<label for="email">Email</label>
+				<label for="email">Emailqqq</label>
 				<input
 					type="email"
 					class="form-control"
@@ -15,7 +15,7 @@
 				<div class="invalid-feedback" v-show="error.email">{{ error.email }}</div>
 			</div>
 			<div class="form-group">
-				<label for="password">Password</label>
+				<label for="password">Passwordvvvv</label>
 				<input
 					type="password"
 					class="form-control"
@@ -29,7 +29,7 @@
 			<div class="form-group">
 				<button type="submit" class="btn btn-primary btn-block" :disabled="loading">
 					<span v-show="loading">Logging in</span>
-					<span v-show="!loading">Login</span>
+					<span v-show="!loading">Loginnnnn</span>
 				</button>
 			</div>
 		</form>
@@ -39,7 +39,8 @@
 <script>
 	import {api} from "../../config";
 
-	export default {
+	export default {  created() {  console.log('/js/components/shared/loginForm.vue-- created');  },
+	
 		data() {
 			return {
 				loading: false,
@@ -54,7 +55,7 @@
 			}
 		},
 		methods: {
-			login() {
+			login() {  console.log('/js/components/login/loginform.js---login clicked, this.form',this.form);
 				this.loading = true;
 				axios.post(api.login, this.form)
 					.then(res => {

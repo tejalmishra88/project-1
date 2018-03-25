@@ -16,6 +16,8 @@
 	import {siteName} from './../../config';
 
 	export default {
+		created() {  console.log('/js/components/shared/home.vue-- created');  },
+	
 		data() {
 			return {
 				siteName: siteName

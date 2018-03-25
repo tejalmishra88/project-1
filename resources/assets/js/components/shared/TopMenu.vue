@@ -31,7 +31,9 @@
 	import {mapGetters} from 'vuex';
 	import jwtToken from '../../helpers/jwt-token';
 
-	export default {
+	export default 
+	{
+		created() {  console.log('/js/components/shared/topmenu.js-- created');  },
 		data() {
 			return {
 				siteName: siteName
@@ -40,6 +42,7 @@
 		computed: mapGetters([
 			'isLoggedIn'
 		]),
+	
 		methods: {
 			logout() {
 				jwtToken.removeToken();

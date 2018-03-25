@@ -25,14 +25,16 @@
 	import jwtToken from "../../helpers/jwt-token";
 	import {mapActions} from "vuex";
 
-	export default {
-		components: {
+	export default 
+	{   created() {  console.log('Login.vue-- created');  },
+	
+		components: 
+		{
 			'login-form': LoginForm
 		},
-		methods: {
-			...mapActions([
-				'setAuthUser'
-			]),
+
+		methods: 
+		{	...mapActions([	'setAuthUser'	]),
 			loginSuccess(data) {
 				jwtToken.setToken(data.token);
 				this.setAuthUser(data.user);

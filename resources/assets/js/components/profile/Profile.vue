@@ -19,7 +19,8 @@
 <script>
 	import {mapState} from 'vuex'
 
-	export default {
+	export default { created() {  console.log('/js/components/shared/Profile.vue-- created');  },
+	
 		computed: mapState({
 			user: state => state.auth
 		})
